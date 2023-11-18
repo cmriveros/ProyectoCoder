@@ -17,6 +17,11 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
+from ProyectoCoder.view  import saludo, dia_de_hoy, miNombreEs
+
 urlpatterns = [
     path('admin/', admin.site.urls),
+    path('saludo/', saludo),
+    path('DiaDeHoy/', dia_de_hoy),
+    path('miNombre/<nombre>', miNombreEs)
 ]
